@@ -43,9 +43,10 @@ StarTechGames/
 
 ## Usage
 
-1. Place your `.pde` games into subfolders under `games/` (make sure to include the `nitz13D.pde` and the `data` folder)
+1. Place your `.pde` games into subfolders under `games/`
+   (make sure to include the `nitz13D.pde` and the `data` folder. for a game thumbnail in the launcher - create a `launcher_thumbnail.png`)
 2. use the shortcut `משחקים`, pointing to `launcher.vbs`, or use the `.vbs` file directly 
    (the `launcher.vbs` runs the `.pde` using the shared `/processing-java.exe`)
-4. in the launcher windows Click a thumbnail to play the game!
+3. in the launcher windows Click a thumbnail to play the game!
 
 ---
