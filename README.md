@@ -29,6 +29,7 @@ StarTechGames/
 ├── games/                # Subfolders for each student game
 │   ├── studentGame.pde
 │   ├── nitz13D.pde
+│   ├── launcher_thumbnail.png
 ├── processing/           # Bundled Processing and Java folders - to be downloaded independently
 │   ├── processing-java.exe
 │   ├── java/
