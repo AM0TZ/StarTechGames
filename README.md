@@ -29,6 +29,7 @@ StarTechGames/
 ├── games/                # Subfolders for each student game
 │   ├── studentGame.pde
 │   ├── nitz13D.pde
+│   ├── launcher_thumbnail.png      # create a screenshot of the game and save with this name - to be displayed as thumbnail in the launcher
 ├── processing/           # Bundled Processing and Java folders - to be downloaded independently
 │   ├── processing-java.exe
 │   ├── java/
@@ -43,7 +44,9 @@ StarTechGames/
 ## Usage
 
 1. Place your `.pde` games into subfolders under `games/`
-2. Run `launcher/` using `processing-java.exe`
-3. Click a thumbnail to play!
+   (make sure to include the `nitz13D.pde` and the `data` folder. for a game thumbnail in the launcher - create a `launcher_thumbnail.png`)
+2. use the shortcut `משחקים`, pointing to `launcher.vbs`, or use the `.vbs` file directly 
+   (the `launcher.vbs` runs the `.pde` using the shared `/processing-java.exe`)
+3. in the launcher windows Click a thumbnail to play the game!
 
 ---
