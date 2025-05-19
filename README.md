@@ -29,7 +29,7 @@ StarTechGames/
 ├── games/                # Subfolders for each student game
 │   ├── studentGame.pde
 │   ├── nitz13D.pde
-│   ├── launcher_thumbnail.png
+│   ├── launcher_thumbnail.png      # create a screenshot of the game and save with this name - to be displayed as thumbnail in the launcher
 ├── processing/           # Bundled Processing and Java folders - to be downloaded independently
 │   ├── processing-java.exe
 │   ├── java/
