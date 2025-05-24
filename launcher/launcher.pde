@@ -6,8 +6,8 @@ import java.util.Map;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
 
-
 PFont font;
+PImage logo;
 
 String sharedJavaPath;
 String processingJavaPath;
@@ -20,10 +20,11 @@ GameItem[] gameItems;
 int hoveredIndex = -1;
 
 void setup() {
-  size(1200, 800);
+  size(1200, 900);
   font = createFont("Arial", 20);
   textFont(font);
-
+  logo = loadImage("StarTech_LOGO.png");
+  
   basePath = sketchPath();
   sharedJavaPath = basePath + "\\..\\processing\\java";
   processingJavaPath = basePath + "\\..\\processing\\processing-java.exe";
@@ -39,10 +40,10 @@ void setup() {
 
 void draw() {
   background(30);
-  fill(255);
+  image(logo, (width - logo.width) / 2.0f, 20);  fill(255);
   textAlign(CENTER, CENTER);
   textSize(32);
-  text(launcherTitle, width / 2, 40);
+  text(launcherTitle, width / 2, 160);
 
   if (gameItems.length == 0) {
     fill(255, 100, 100);
@@ -50,11 +51,11 @@ void draw() {
     return;
   }
 
-  int cols = 3;
+  int cols = 5;
   int thumbSize = 150;
   int margin = 40;
   int startX = (width - (cols * thumbSize + (cols - 1) * margin)) / 2;
-  int startY = 100;
+  int startY = 200;
 
   textSize(16);
   hoveredIndex = -1;
@@ -114,7 +115,7 @@ void draw() {
 void drawInstructions() {
   fill(150);
   textSize(16);
-  text("Click a game thumbnail to play", width / 2, height - 30);
+  text("Amotz Holender-Tal ©2025", width / 2, height - 30);
 }
 
 void mousePressed() {

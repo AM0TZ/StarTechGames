@@ -1,3 +1,14 @@
+// Ninja Game by Amotz Holender-Tal ©2025
+
+// example game for Startech students with specail features: 
+//  * ULT attack with ULT bar
+//  * Double-tap direction for Dash
+//  * God-Mode 
+//  * high score (txt file based for persistence) 
+//  * level based difficulty
+//  * multiple sprite animations
+
+
 // initializing objects
 
 Image background1 = new Image();
