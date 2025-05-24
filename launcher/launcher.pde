@@ -21,7 +21,7 @@ int hoveredIndex = -1;
 
 void setup() {
   size(1200, 900);
-  font = createFont("Arial", 20);
+  font = createFont("Play-Regular.ttf", 24);
   textFont(font);
   logo = loadImage("StarTech_LOGO.png");
   
@@ -42,7 +42,7 @@ void draw() {
   background(30);
   image(logo, (width - logo.width) / 2.0f, 20);  fill(255);
   textAlign(CENTER, CENTER);
-  textSize(32);
+  textSize(40);
   text(launcherTitle, width / 2, 160);
 
   if (gameItems.length == 0) {
@@ -57,7 +57,7 @@ void draw() {
   int startX = (width - (cols * thumbSize + (cols - 1) * margin)) / 2;
   int startY = 200;
 
-  textSize(16);
+  textSize(18);
   hoveredIndex = -1;
 
   for (int i = 0; i < gameItems.length; i++) {
@@ -108,15 +108,12 @@ void draw() {
     textAlign(CENTER);
     text(game.name, x + thumbSize / 2, y + thumbSize + 18);
   }
+    // Draw credit
+    fill(150);
+    textSize(16);
+    text("Amotz Holender-Tal ©2025", width / 2, height - 30);
+  }
 
-  drawInstructions();
-}
-
-void drawInstructions() {
-  fill(150);
-  textSize(16);
-  text("Amotz Holender-Tal ©2025", width / 2, height - 30);
-}
 
 void mousePressed() {
   if (hoveredIndex >= 0 && hoveredIndex < gameItems.length) {
