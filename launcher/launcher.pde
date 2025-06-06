@@ -1,4 +1,4 @@
-// v1.1
+// v1.1 by Amotz Holender-Tal 2025 (C)
 
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +20,7 @@ GameItem[] gameItems;
 int hoveredIndex = -1;
 
 void setup() {
-  size(1200, 900);
+  size(1400, 900);
   font = createFont("Play-Regular.ttf", 24);
   textFont(font);
   logo = loadImage("StarTech_LOGO.png");
@@ -51,7 +51,7 @@ void draw() {
     return;
   }
 
-  int cols = 5;
+  int cols = 6;
   int thumbSize = 150;
   int margin = 40;
   int startX = (width - (cols * thumbSize + (cols - 1) * margin)) / 2;
