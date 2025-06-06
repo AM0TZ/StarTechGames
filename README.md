@@ -31,7 +31,7 @@ StarTechGames/
 │   ├── studentGame.pde
 │   ├── nitz13D.pde
 │   ├── launcher_thumbnail.png      # create a screenshot of the game and save with this name - to be displayed as thumbnail in the launcher
-├── processing/           # Bundled Processing and Java folders - to be downloaded independently
+├── processing/           # Bundled Processing and Java folders - to be downloaded independently 
 │   ├── processing-java.exe
 │   ├── java/
 │   └── libraries/
@@ -39,28 +39,44 @@ StarTechGames/
 
 ## Requirements
 
-* Windows OS
-* No Java installation required (included in `processing/java`)
+- **Windows Operating System**
+- **Java Runtime Environment (JRE)**  
+  Download the Java bundle from [this link](https://github.com/processing/processing4/releases/download/processing-1297-4.3.4/processing-4.3.4-windows-x64.zip) and extract it into the `processing/java` directory.  
+  > ***Note:** This is the last version of Processing that **does not** require installation and can run as a standalone application.*
+
 
 ## Usage
 
-1. Place your `.pde` games into subfolders under `games/`
-   (make sure to include the `nitz13D.pde` and the `data` folder. for a game thumbnail in the launcher - take a screenshot of the game screen and add as `launcher_thumbnail.png` to game folder)
-2. use the shortcut `משחקים`, pointing to `launcher.vbs`, or use the `.vbs` file directly 
-   (the `launcher.vbs` runs the `.pde` using the shared `/processing-java.exe`)
-3. in the launcher windows Click a thumbnail to play the game!
+1. Place your `.pde` games into subfolders under the `games/` directory.  
+   - Each game folder should include the `nitz13D.pde` file and a `data` folder.  
+   - To display a thumbnail in the launcher, take a screenshot of the game screen and save it as `launcher_thumbnail.png` in the game's folder.
+
+2. Use the desktop shortcut named `משחקים` (which points to `launcher.vbs`), or run `launcher.vbs` directly.  
+   - This script launches the game using the shared `processing-java.exe`.
+
+3. In the launcher window, click a game thumbnail to start playing!
 
 
 ## Known Issues
 
-🚨  When you download a .vbs (or .pde, .exe, etc.) from the web or GitHub, Windows attaches a hidden "Zone.Identifier" metadata to the file — called an Alternate Data Stream (ADS). 
-This tells the system (and antivirus tools) that the file came from the Internet and should be treated with caution.
+### 🚨 Files May Be Flagged After Download
 
-✅ How to Confirm This: Check for Zone.Identifier: 
-Right-click the downloaded file → Properties. If you see a message at the bottom like:
-        `This file came from another computer and might be blocked to help protect this computer.`
-That confirms it's flagged due to its origin.
+When you download a `.vbs`, `.pde`, `.exe`, or similar file from the web or GitHub, Windows automatically attaches a hidden metadata tag called a **Zone.Identifier** (an Alternate Data Stream, or ADS).  
+This tells the operating system and antivirus software that the file originated from the Internet and should be treated with caution.
 
-🛠️ How to Mitigate It: Remove the "Internet Zone" Mark by Right-clicking the .vbs → Properties → click Unblock (if visible) → Apply.
-   do it for the .vbe if needed
+### ✅ How to Check for This
 
+1. **Right-click** the downloaded file and select **Properties**.
+2. If you see a message at the bottom that says:  
+`This file came from another computer and might be blocked to help protect this computer.`
+— this confirms that the file is flagged due to its origin.
+
+### 🛠️ How to Fix It
+
+To remove the Internet zone warning:
+
+- **Right-click** the file (e.g., `.vbs` or `.vbe`)
+- Select **Properties**
+- Click the **Unblock** checkbox (if available), then click **Apply**
+
+Repeat this process for any additional files (e.g., `.vbe`) if needed.
