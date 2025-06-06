@@ -50,4 +50,17 @@ StarTechGames/
    (the `launcher.vbs` runs the `.pde` using the shared `/processing-java.exe`)
 3. in the launcher windows Click a thumbnail to play the game!
 
----
+
+## Known Issues
+
+🚨  When you download a .vbs (or .pde, .exe, etc.) from the web or GitHub, Windows attaches a hidden "Zone.Identifier" metadata to the file — called an Alternate Data Stream (ADS). 
+This tells the system (and antivirus tools) that the file came from the Internet and should be treated with caution.
+
+✅ How to Confirm This: Check for Zone.Identifier: 
+Right-click the downloaded file → Properties. If you see a message at the bottom like:
+        `This file came from another computer and might be blocked to help protect this computer.`
+That confirms it's flagged due to its origin.
+
+🛠️ How to Mitigate It: Remove the "Internet Zone" Mark by Right-clicking the .vbs → Properties → click Unblock (if visible) → Apply.
+   do it for the .vbe if needed
+
