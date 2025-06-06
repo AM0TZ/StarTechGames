@@ -5,7 +5,8 @@ This project is open-source under the [MIT License](LICENSE).
 ## Author
 
 Created by *Amotz Holender-Tal*
-![image](https://github.com/user-attachments/assets/6c386dd1-6f13-44ef-8fbe-a42f8d7cbe79)
+
+![image](https://github.com/user-attachments/assets/7ddd9be7-0443-4085-88ed-0cf6f2f2cd63)
 
 # StarTechGames Launcher
 
