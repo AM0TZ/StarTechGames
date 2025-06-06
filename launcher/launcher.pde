@@ -1,4 +1,4 @@
-// v1.2 by Amotz Holender-Tal 2025 (C)
+// v1.1
 
 import java.io.File;
 import java.io.IOException;
@@ -51,7 +51,7 @@ void draw() {
     return;
   }
 
-  int cols = 6;
+  int cols = 7;
   int thumbSize = 150;
   int margin = 40;
   int startX = (width - (cols * thumbSize + (cols - 1) * margin)) / 2;

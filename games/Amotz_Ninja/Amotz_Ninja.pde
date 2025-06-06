@@ -321,7 +321,7 @@ void draw() {
         case 0: level++; lives++; break;
       }  
     }
-    if ((score <= highScore) && (lives <= 0)) {       // failure :
+    if ((score < highScore) && (lives <= 0)) {       // failure :
       if (!EndMessagePlayed) {
       failed.stop();
       youlose.play();
@@ -337,7 +337,7 @@ void draw() {
 
 
         }
-    else if ((score > highScore) && (lives <= 0)) {  // success:
+    else if ((score >= highScore) && (lives <= 0)) {  // success:
       if (!EndMessagePlayed) {
       success.stop();
       victory.play(); 
