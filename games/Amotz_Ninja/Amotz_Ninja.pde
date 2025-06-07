@@ -1,13 +1,14 @@
 // Ninja Game by Amotz Holender-Tal ©2025
 
-// example game for Startech students with specail features: 
-//  * ULT attack with ULT bar
-//  * Double-tap direction for Dash
-//  * God-Mode 
-//  * high score (txt file based for persistence) 
-//  * level based difficulty
-//  * multiple sprite animations
-
+// Example game for StarTech students showcasing advanced features:
+//  * Dash action triggered by double-tapping a movement key
+//  * Ultimate (ULT) attack with custom animation and a chargeable Ult bar
+//  * Hidden God Mode activated by a special key sequence (causes a shuriken explosion)
+//  * High score system with persistent storage using a .txt file
+//  * Level-based difficulty progression
+//  * Toggle background music on/off
+//  * Multiple sprite animations: ninja, shuriken, explosion, lightning, and slash effects
+//  * Includes opening screen, game over screen, and high score display
 
 // initializing objects
 
@@ -71,7 +72,7 @@ boolean highScoreSaved = false;
 String playerName = "Player1"; 
 boolean enteringName = false;
 boolean nameEntered = false;
-
+// music control
   
 // game setup (runs only once at initialization phase)
 
@@ -178,7 +179,6 @@ void setup() {
   GameRun.load("bg_music.mp3"); //background music looping:
   GameRun.loop = true;
   GameRun.play();
-
 
   
 // text objects defenitions:
