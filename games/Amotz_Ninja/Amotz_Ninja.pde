@@ -72,7 +72,7 @@ boolean highScoreSaved = false;
 String playerName = "Player1"; 
 boolean enteringName = false;
 boolean nameEntered = false;
-// music control
+
   
 // game setup (runs only once at initialization phase)
 
@@ -102,13 +102,13 @@ void setup() {
   highScoreScreen.width = 1024;
   highScoreScreen.height = 512;
 
-  gameOverScreen.setImage("game over.png");  //defet screen
+  gameOverScreen.setImage("game over.png");  // defet screen
   gameOverScreen.x=0;
   gameOverScreen.y =0;
   gameOverScreen.width = 1024;
   gameOverScreen.height = 512;
 
-  startGame.setImage("start.png");   //start screen
+  startGame.setImage("start.png");   // start screen
   startGame.x=0;
   startGame.y =0;
   startGame.width = 1024;
@@ -176,7 +176,7 @@ void setup() {
   success.load("haya2.mp3");
   failed.load("fail.mp3");
   ExplosionFX.load("Explosion.mp3");
-  GameRun.load("bg_music.mp3"); //background music looping:
+  GameRun.load("bg_music.mp3"); // background music looping:
   GameRun.loop = true;
   GameRun.play();
 
@@ -191,6 +191,7 @@ void setup() {
   scoretxt.textSize = 36;
   scoretxt.font = "Tahoma";
 
+// HighScore
   String[] data = loadStrings("highScore.txt"); // Load file content
   if (data != null && data.length > 0) {
     String[] parts = split(data[0], ','); // Split name and score
@@ -201,42 +202,42 @@ void setup() {
     }  else {
     highScore = -1;
     }
-  highScoretxt.x = 510; //Score
+  highScoretxt.x = 510; 
   highScoretxt.y = 100;
   highScoretxt.brush = color(255);
   highScoretxt.textSize = 20;
   highScoretxt.font = "Tahoma";
   highScoretxt.text = "High Score: "  + str(highScore) + " | Player: " + playerName;
 
-  currentScoretxt.x = 510; //Score
+  currentScoretxt.x = 510; // Score
   currentScoretxt.y = 100;
   currentScoretxt.brush = color(255);
   currentScoretxt.textSize = 20;
   currentScoretxt.font = "Tahoma";
   currentScoretxt.text = "your Score: " + str(score);
 
-  leveltxt.x = 530;  //Level
+  leveltxt.x = 530;  // Level
   leveltxt.y = 35;
   leveltxt.brush = color(255);
   leveltxt.textSize = 36;
   leveltxt.font = "Tahoma";
   leveltxt.text = "Level " + level;
 
-  controltxt.x = 900; //on screen Controls menu
+  controltxt.x = 900; // on screen Controls menu
   controltxt.y = 440;
   controltxt.brush = color(255);
   controltxt.textSize = 16;
   controltxt.font = "Tahoma";
   controltxt.text = "<-- LEFT | RIGHT = -->\nSTOP = down arrow\nDASH = double tap key\nULT = space bar";
   
-  restart.x = 500;  //restart messege
+  restart.x = 500;  // restart messege
   restart.y = 480;
   restart.brush = color(255);
   restart.text = "Press 'R' to Restart or 'M' to exit to Menu";
   restart.textSize = 28;
   restart.font = "Tahoma";
   
-  Menutxt.x = 430; //exit to menu messege
+  Menutxt.x = 430; // exit to menu messege
   Menutxt.y = 485;
   Menutxt.brush = color(0);
   Menutxt.text = "      Press ENTER to Start DEFENDING";
@@ -272,7 +273,7 @@ void draw() {
         ExplosionTimer--;        
     }    
     
-      scoretxt.text = "score: " + score; //computing the score      
+      scoretxt.text = "score: " + score; // computing the score      
       scoretxt.draw();
       highScoretxt.draw();
       leveltxt.text = "Level " + level;
@@ -280,9 +281,8 @@ void draw() {
       controltxt.draw();
       ninja.draw();
       
-      int j = UltTimer;
-      if (j < 6) {
-      image(Mana[j], 490, 60, 80, 30); // name, x, y, W, H
+      if (UltTimer < 6) {
+      image(Mana[UltTimer], 490, 60, 80, 30); // name, x, y, W, H
       } else {
         ManaFull.draw();
       }
@@ -301,7 +301,7 @@ void draw() {
       ninja.speed = 0;
     }
 
-    if (shuriken.y > 512) {    //shuriken hits
+    if (shuriken.y > 512) {    // shuriken hits
       shuriken.x = (int)random(974);
       shuriken.y = 1;
       failed.play();
@@ -309,7 +309,7 @@ void draw() {
       createLivesArray();
     }
 
-    if (ninja.pointInShape(shuriken.x, shuriken.y)) {  //shuriken intercepted
+    if (ninja.pointInShape(shuriken.x, shuriken.y)) {  // shuriken intercepted
       shuriken.x = (int)random(974);
       shuriken.y = 1;
       success.play();
@@ -327,7 +327,7 @@ void draw() {
       youlose.play();
       EndMessagePlayed = true;
         }
-      gameOverScreen.draw(); //<>//
+      gameOverScreen.draw(); 
       shuriken.speed = 0;
       GameOn = false;
       restart.brush = color(0);
@@ -343,7 +343,7 @@ void draw() {
       victory.play(); 
       EndMessagePlayed = true;
       }
-      shuriken.speed = 0; //<>//
+      shuriken.speed = 0; 
       GameOn = false;
       highScore = score;
       highScoreScreen.draw();
@@ -356,9 +356,9 @@ void draw() {
       }
       highScoretxt.text = "Player: "  + playerName + " | Score: " + str(highScore);     
      
-      String[] data = {playerName + "," + str(score)}; // Convert variable to a string array //<>//
+      String[] data = {playerName + "," + str(score)}; // Convert variable to a string array 
       if ((!highScoreSaved) && (nameEntered)) {
-        saveStrings(dataPath("highScore.txt"), data); //<>//
+        saveStrings(dataPath("highScore.txt"), data); 
         highScoreSaved = true;      
       println("Saving to: " + dataPath("highScore.txt") + data[0]);
           }
@@ -439,13 +439,13 @@ void keyPressed() {
       ninja.imageBaseName = "ninja_right";  // ninja object
   
       ninja.speed = 6;
-      int currentTime = millis();  //double tap logic
+      int currentTime = millis();  // double tap logic
       if (currentTime - lastPressTime < doubleTapThreshold) {
             ninja.speed = 12;
           }
       lastPressTime = currentTime;    
     } 
-    else if (keyCode == LEFT) {    //double tap logic
+    else if (keyCode == LEFT) {    // double tap logic
       ninja.direction = Direction.LEFT;
       ninja.imageBaseName = "ninja_left";  // ninja object
       ninja.speed = 6;
@@ -462,7 +462,6 @@ void keyPressed() {
       Explosion.x = shuriken.x;
       Explosion.y = shuriken.y;    
       Lightning.x = shuriken.x - 50;
-      //lightning_origin = shuriken.y;
       ExplosionTimer = 10;
       shuriken.x = (int)random(974);
       shuriken.y = 1;
@@ -487,7 +486,7 @@ void keyPressed() {
         resetGame();
         }
       } 
-      // high score name entering logic: //<>// //<>//
+      // high score name entering logic: 
       else if (enteringName) { 
         if (key == ENTER) {
           nameEntered = true;
