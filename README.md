@@ -1,13 +1,9 @@
 ## License
 
-Copyright © [2025] [Amotz Holender-Tal]
+Copyright © [2025] [Amotz Holender-Tal](https://github.com/AM0TZ)
 
 This software is licensed for personal, non-commercial use only.
 Commercial use, government use, educational or institutional use, redistribution, and modification are prohibited.
-
-## Author
-
-Created by *Amotz Holender-Tal*
 
 ![image](https://github.com/user-attachments/assets/02ff3f88-64d8-45a9-8cd2-728b4ef95676)
 
