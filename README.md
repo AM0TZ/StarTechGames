@@ -1,6 +1,9 @@
 ## License
 
-This project is open-source under the [MIT License](LICENSE).
+Copyright © [2025] [Amotz Holender-Tal]
+
+This software is licensed for personal, non-commercial use only.
+Commercial use, government use, educational or institutional use, redistribution, and modification are prohibited.
 
 ## Author
 
