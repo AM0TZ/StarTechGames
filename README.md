@@ -1,6 +1,6 @@
 ## License
 
-Copyright © 2025 Amotz_Holender-Tal
+Copyright ©2025 Amotz_Holender-Tal
 
 This software is licensed for personal, non-commercial use only.
 Commercial use, government use, educational or institutional use, redistribution, and modification are prohibited.
