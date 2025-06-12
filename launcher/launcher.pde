@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Map;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
+import java.util.Arrays;
+import java.util.Comparator;
 
 PFont font;
 PImage logo;
@@ -153,7 +155,15 @@ GameItem[] loadGameItems() {
     }
   }
 
-  return items.toArray(new GameItem[0]);
+  // Convert to array and sort alphabetically by name
+  GameItem[] gameArray = items.toArray(new GameItem[0]);
+  Arrays.sort(gameArray, new Comparator<GameItem>() {
+    public int compare(GameItem a, GameItem b) {
+      return a.name.compareToIgnoreCase(b.name);
+    }
+  });
+
+  return gameArray;
 }
 
 class GameItem {
