@@ -4,8 +4,7 @@ Copyright ©2025 Amotz_Holender-Tal
 
 This software is licensed for personal, non-commercial use only.
 Commercial use, government use, educational or institutional use, redistribution, and modification are prohibited.
-
-![image](https://github.com/user-attachments/assets/02ff3f88-64d8-45a9-8cd2-728b4ef95676)
+![image](https://github.com/user-attachments/assets/b2932ee9-31f6-46bb-a398-54dc08e81ec1)
 
 # StarTechGames Launcher
 
